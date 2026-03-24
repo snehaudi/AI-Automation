@@ -1,0 +1,126 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - img [ref=e6]
+    - generic [ref=e18]:
+      - link "Home" [ref=e19] [cursor=pointer]:
+        - /url: /#
+        - button "Home" [pressed] [ref=e20]:
+          - img [ref=e22]
+          - text: Home
+      - link "Documentation" [ref=e24] [cursor=pointer]:
+        - /url: /#documentation
+        - button "Documentation" [ref=e25]:
+          - img [ref=e27]
+          - text: Documentation
+      - link "Support" [ref=e29] [cursor=pointer]:
+        - /url: /#support
+        - button "Support" [ref=e30]:
+          - img [ref=e32]
+          - text: Support
+      - link "Products" [ref=e34] [cursor=pointer]:
+        - /url: /#products
+        - button "Products" [ref=e35]:
+          - img [ref=e37]
+          - text: Products
+      - link "Ansible Templates" [ref=e39] [cursor=pointer]:
+        - /url: /#ansibleProducts
+        - button "Ansible Templates" [ref=e40]:
+          - img [ref=e42]
+          - text: Ansible Templates
+      - link "Customers" [ref=e44] [cursor=pointer]:
+        - /url: /#customers
+        - button "Customers" [ref=e45]:
+          - img [ref=e47]
+          - text: Customers
+      - link "Administration" [ref=e49] [cursor=pointer]:
+        - /url: /#administration
+        - button "Administration" [ref=e50]:
+          - img [ref=e52]
+          - text: Administration
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - button "John Test" [ref=e59]:
+          - img [ref=e61]
+          - generic [ref=e63]: John Test
+          - img [ref=e65]
+        - button [ref=e68]:
+          - img [ref=e70]
+      - separator [ref=e72]
+  - generic [ref=e75]:
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - generic [ref=e79]: Welcome to
+        - generic [ref=e80]: Addovation Cloud
+      - generic [ref=e82]:
+        - img "software services" [ref=e83]
+        - generic [ref=e84]: Here you have access to all Addovation Cloud Products. Monitor your customer subscriptions to know when they expire. Create subscriptions for new customers and access the documentation you need to set up the product or to make changes to existing solutions.
+    - generic [ref=e85]:
+      - generic [ref=e86]: All Subscriptions
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - generic [ref=e89]: "116"
+          - generic [ref=e90]: Count
+        - generic [ref=e91]:
+          - generic [ref=e92]: "56"
+          - generic [ref=e93]: Expired
+        - generic [ref=e94]:
+          - generic [ref=e95]: "0"
+          - generic [ref=e96]: Expiring soon
+    - generic [ref=e101]:
+      - button "Addovation" [ref=e104] [cursor=pointer]:
+        - img [ref=e106]
+        - text: Addovation
+      - button "Scania" [ref=e110] [cursor=pointer]:
+        - img [ref=e112]
+        - text: Scania
+      - button "Alfaskog" [ref=e116] [cursor=pointer]:
+        - img [ref=e118]
+        - text: Alfaskog
+      - button "DemoName" [ref=e122] [cursor=pointer]:
+        - img [ref=e124]
+        - text: DemoName
+      - button "SLCustomer" [ref=e128] [cursor=pointer]:
+        - img [ref=e130]
+        - text: SLCustomer
+      - button "Customer607" [ref=e134] [cursor=pointer]:
+        - img [ref=e136]
+        - text: Customer607
+      - button "SLCusDemo" [ref=e140] [cursor=pointer]:
+        - img [ref=e142]
+        - text: SLCusDemo
+      - button "cus 0101" [ref=e146] [cursor=pointer]:
+        - img [ref=e148]
+        - text: cus 0101
+      - button "Customer B" [ref=e152] [cursor=pointer]:
+        - img [ref=e154]
+        - text: Customer B
+      - button "Pubuduni" [ref=e158] [cursor=pointer]:
+        - img [ref=e160]
+        - text: Pubuduni
+      - button "Addovation AS" [ref=e164] [cursor=pointer]:
+        - img [ref=e166]
+        - text: Addovation AS
+      - button "AndersSub" [ref=e170] [cursor=pointer]:
+        - img [ref=e172]
+        - text: AndersSub
+      - button "Amelia" [ref=e176] [cursor=pointer]:
+        - img [ref=e178]
+        - text: Amelia
+      - button "customer addo demo 0101" [ref=e182] [cursor=pointer]:
+        - img [ref=e184]
+        - text: customer addo demo 0101
+      - button "Sarah" [ref=e188] [cursor=pointer]:
+        - img [ref=e190]
+        - text: Sarah
+      - button "Damro" [ref=e194] [cursor=pointer]:
+        - img [ref=e196]
+        - text: Damro
+      - button "ProMax" [ref=e200] [cursor=pointer]:
+        - img [ref=e202]
+        - text: ProMax
+      - button "SVT" [ref=e206] [cursor=pointer]:
+        - img [ref=e208]
+        - text: SVT
+      - button "TestCustomer_0002" [ref=e212] [cursor=pointer]:
+        - img [ref=e214]
+        - text: TestCustomer_0002

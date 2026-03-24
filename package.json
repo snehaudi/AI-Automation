@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@google/gemini-cli": "^0.32.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.4.0"
+  },
+  "scripts": {
+    "test": "npx playwright test",
+    "smoke": "npx playwright test tests/smoke",
+    "login": "npx playwright test tests/smoke/TC-LOGIN-01.spec.ts",
+    "regression": "npx playwright test tests/regression",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "report": "npx playwright show-report reports/html-report"
+  }
+}
