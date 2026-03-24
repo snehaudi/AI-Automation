@@ -1,0 +1,9 @@
+{
+  "TC-USER-01": {
+    "name": "TestUser_00001",
+    "customerName": "TestCustomer_0002",
+    "account": "testuser001@skyforce.no",
+    "email": "testuser001@skyforce.no",
+    "phone": "7123456709"
+  }
+}

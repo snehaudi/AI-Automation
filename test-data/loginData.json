@@ -1,0 +1,8 @@
+{
+    "cloudPortal": {
+        "url": "https://addocloudplatformdemoapp2.azurewebsites.net/",
+        "username": "john.Smith@skyforce.no",
+        "password": "Drammen2023",
+        "expectedUser": "John Test"
+    }
+}

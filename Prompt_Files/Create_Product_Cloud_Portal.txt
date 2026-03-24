@@ -1,0 +1,92 @@
+You are an AI automation agent using Playwright MCP.
+
+Create a Playwright automated test using the existing automation framework.
+
+Test Case ID: TC-PRODUCT-01
+Test Case Name: Create a Product
+
+Application URL:
+https://addocloudplatformdemoapp2.azurewebsites.net/
+
+Prerequisite:
+Execute the login test case (TC-LOGIN-01.spec) to authenticate the user before running this test.
+
+Test Data:
+
+Product Name: TestProduct_001
+Description: Testing_Product
+Database Name: PortalDummyDB
+Database URI: https://addocloud.documents.azure.com:443/
+Database Container: CustomerSettings1
+Database Access Key: QfwOogbnlM3mUBZR62uZYiAb08kQZTD6lvoYnqxJfcmIlniQ0TmNXQhx6KmeX0BmRnjLsFf9Vo0JrKba8xzkAA==
+
+Schema:
+{
+"name": "charlie",
+"age": 12,
+"pet": "rabbit"
+}
+
+
+Test Steps:
+
+1. Navigate to the "Products" tab.
+2. Validate the highlighted "Products" menu item.
+3. Click the "+" icon to create a new product.
+4. Validate the "Create New Product" popup is displayed and verify the header "Create New Product".
+5. Enter product Name.
+6. Enter product Description.
+7. Upload SVG logo file.
+8. Select the "Published" checkbox.
+9. Click "Next" to continue.
+10. Click "Next" to continue.
+11. Navigate to the "API Explorer" tab.
+12. Find an API and click the "Add+" icon.
+13. Navigate to the "Product API" tab and verify the API is added.
+14. Click "Next".
+15. Select the API from the dropdown list.
+16. Click "+" to add customer settings.
+17. Expand Setting 1.
+18. Enter database configuration details. (Database Name, Database URI, Database Container, Database Access Key)
+19. Enter schema information.
+20. Click "Save".
+21. Validate product name in the final Done window.
+22. Click "Close".
+23. Search the product using the product name.
+24. Verify the created product appears in the product list. 
+   - Product Name
+   - Product Description
+   - Published bar enabled
+25. Open the product card using click action.
+26. Click the eye icon for "Database Access Key".
+27. Expand "Setting Schema".
+28. Verify "Product Information" value match with correct field.
+    - Product Name
+    - Description
+    - "Published" checkbox enabled
+29. Verify the uploaded SVG icon is displayed.
+29. Verify "API Details" value match with correct field. 
+    - Database Name
+    - Database URI
+    - Database Container
+    - Database Access Key
+30. Verify "Setting Schema" values match the entered schema.
+
+
+Expected Result:
+
+- "Products" page is displayed.
+- "Create New Product" popup is displayed.
+- Product details are successfully saved.
+- Created product appears in the product list.
+- Product information and API details are correctly displayed.
+
+Automation Notes:
+
+- Follow the existing Playwright automation framework structure.
+- Use Page Object Model.
+- Use locators from the `locators` folder.
+- Use test data from `test-data/productData.json`.
+- Place the test in `tests/regression/product.spec.ts`.
+- Capture screenshots for important validation steps.
+- Capture screenshots automatically on failures.

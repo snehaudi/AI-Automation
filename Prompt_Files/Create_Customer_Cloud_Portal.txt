@@ -1,0 +1,80 @@
+You are an AI automation agent using Playwright MCP.
+
+Create a Playwright automated test using the existing automation framework.
+
+Test Case ID: TC-CUSTOMER-01
+Test Case Name: Create a Customer
+
+Application URL:
+https://addocloudplatformdemoapp2.azurewebsites.net/
+
+Prerequisite:
+Execute the login test case (TC-LOGIN-01.spec) to authenticate the user before running this test.
+
+Test Data:
+
+Customer Name: TestCustomer_001
+Reference ID: Cus_0001
+Key Account Manager: John Test (john.smith@skyforce.no)
+Tenant Domain: Skyforce.no
+Tenant ID: a9dd9abd-8421-438f-9ada-ccf86c106264
+Customer Support Key: 3604c46a263453b8d7f0fedd3e37ed9499bb8890
+Logo Image URL: <provide valid logo image url>
+
+
+Test Steps:
+
+1. Navigate to the "Customers" tab.
+2. Validate the highlighted "Customers" menu item.
+3. Click the "+" icon to create a new customer.
+4. Validate the "Create New Customer" popup is displayed and verify the header "Create New Customer".
+5. Enter customer Name.
+6. Enter Reference ID.
+7. Select "Key Account Manager" from the dropdown list.
+8. Click "+" icon in the Tenants section.
+9. Enter Tenant Domain.
+10. Enter Tenant ID.
+11. Click "Add" button to add the tenant.
+12. Enter Customer Support Key.
+13. Enter Logo Image URL.
+14. Click "Submit" button to create the customer.
+15. Search the customer using the customer name in the search box.
+16. Verify the created customer appears in the customer list.
+    - Customer Name
+    - Logged in user's name
+    - Logged in user's phone number
+17. Open the customer card using click action.
+18. Click the eye icon for "Customer Support Key".
+19. Verify customer overview details.
+    - Customer Name
+    - Reference ID
+    - Customer Support Key
+20. Verify Key Account Manager details.
+    - KAM Name
+    - Email address
+    - Phone Number
+21. Navigate to the "Tenants" tab.
+22. Verify tenant information.
+    - Tenant Domain
+    - Tenant ID
+
+
+Expected Result:
+
+- "Customers" page is displayed.
+- "Create New Customer" popup is displayed.
+- Customer details are successfully saved.
+- Created customer appears in the customer list.
+- Customer information and KAM details are correctly displayed.
+- Tenant information is correctly displayed.
+
+
+Automation Notes:
+
+- Follow the existing Playwright automation framework structure.
+- Use Page Object Model.
+- Use locators from the `locators` folder.
+- Use test data from `test-data/customerData.json`.
+- Place the test in `tests/regression/customer.spec.ts`.
+- Capture screenshots for important validation steps.
+- Capture screenshots automatically on failures.

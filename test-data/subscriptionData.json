@@ -1,0 +1,15 @@
+{
+    "subscription": {
+        "customerName": "TestCustomer_0002",
+        "subscriptionName": "TestSubscription_6565",
+        "tenant": "skyforce.no",
+        "product": "TestProduct_001",
+        "duration": "10",
+        "quotaLimit": "100",
+        "rateLimit": "20",
+        "gracePeriod": "5",
+        "expirationWarning": "2",
+        "requestCountWarning": "78"
+    }
+}
+

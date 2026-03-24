@@ -1,0 +1,16 @@
+{
+    "TC-PRODUCT-01": {
+        "productName": "TestProduct_0001",
+        "description": "Testing_Product",
+        "apiName": "Addo Test API",
+        "databaseName": "PortalDummyDB",
+        "databaseUri": "https://addocloud.documents.azure.com:443/",
+        "databaseContainer": "CustomerSettings1",
+        "databaseAccessKey": "QfwOogbnlM3mUBZR62uZYiAb08kQZTD6lvoYnqxJfcmIlniQ0TmNXQhx6KmeX0BmRnjLsFf9Vo0JrKba8xzkAA==",
+        "schema": {
+            "name": "charlie",
+            "age": 12,
+            "pet": "rabbit"
+        }
+    }
+}

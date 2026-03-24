@@ -1,0 +1,147 @@
+You are an AI automation agent using Playwright MCP.
+
+Create a Playwright automated test using the existing automation framework.
+
+Test Case ID: TC-SUBS-01
+Test Case Name: Create a Subscription
+
+Application URL:
+https://addocloudplatformdemoapp2.azurewebsites.net/
+
+Prerequisite:
+Execute the login test case (TC-LOGIN-01.spec) to authenticate the user before running this test.
+
+Test Data:
+
+Customer Name: TestCustomer_0002
+Subscription Name: TestSubscription_001
+Tenant: Skyforce.no
+Product: TestProduct_001
+Subscription Duration: 10
+Quota Limit: 100
+Rate Limit: 20
+Grace Period: 5
+Expiration Warning: 2
+Request Count Warning: 78
+
+Test Steps:
+
+1. Navigate to the "Customers" tab.
+
+2. Click the search box at the top of the Customers window and enter the customer name.
+   Customer Name: TestCustomer_0002
+
+3. Click the customer card to open customer details.
+
+4. Navigate to the "Subscriptions" tab.
+
+5. Click the "+" icon from Subscriptions.
+   Validate popup window:
+   - "New subscription for customer" + Customer Name. Ex: "New subscription for customer TestCustomer_0002"
+   - Customer name displayed in header.
+
+6. Enter Subscription Name.
+   Subscription Name: TestSubscription_001
+
+7. Select Tenant from dropdown.
+   Tenant: Skyforce.no
+
+8. Select Product from dropdown.
+   Product: TestProduct_001
+
+9. Click calendar icon and select today's date as Start Date.
+
+10. Enter Subscription Duration.
+    Value: 10
+
+11. Enter Quota Limit.
+    Value: 100
+
+12. Enter Rate Limit.
+    Value: 20
+
+13. Enter Grace Period.
+    Value: 5
+
+14. Enter Expiration Warning.
+    Value: 2
+
+15. Enter Request Count Warning.
+    Value: 78
+
+16. Click the "Submit" button.
+
+17. Click the "Close" button.
+
+18. Validate the subscription appears in the Subscriptions list.
+    Verify:
+    - Subscription Name
+    - End Date
+
+19. Click the created Subscription card.
+
+20. Validate Subscription details.
+
+    Basic Information
+    - Subscription Name
+    - Customer
+    - Tenant
+    - Product
+
+    Subscription Details
+    - Start Date
+    - End Date
+    - Primary Key
+    - Secondary Key
+    - Quota Limit
+    - Rate Limit
+    - Expiration Warning
+    - Request Count Warning
+    - Grace Days
+    - Active checkbox enabled
+
+21. Navigate to the "Products" tab.
+
+22. Click the search box at the top of the Products window and enter the product name.
+    Product Name: TestProduct_001
+
+23. Click the product card.
+
+24. Navigate to the "Subscriptions" tab.
+
+25. Validate the subscription appears in the product subscription list.
+    Verify:
+    - Subscription Name
+    - Customer
+    - End Date
+    - Status = Live
+    - Active checkbox enabled
+
+26. Navigate to the Home page.
+
+27. Scroll down and expand the customer.
+
+28. Validate the subscription availability.
+    Verify:
+    - Subscription Name
+    - End Date
+
+
+Expected Result:
+
+- "New subscription for customer" popup appears.
+- Subscription details are successfully saved.
+- Created subscription appears in the customer subscription list.
+- Subscription details display correctly in the subscription card.
+- Subscription appears in the Product → Subscriptions tab.
+- Subscription appears in the Home page customer view.
+
+Automation Notes:
+
+- Follow the existing Playwright automation framework structure.
+- Use Page Object Model.
+- Use locators from the `locators` folder.
+- Use test data from `test-data/subscriptionData.json`.
+- Place the test in `tests/regression/subscription.spec.ts`.
+- Capture screenshots for important validation steps.
+- Capture screenshots automatically on failures.

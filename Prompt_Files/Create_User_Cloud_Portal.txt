@@ -1,0 +1,80 @@
+You are an AI automation agent using Playwright MCP.
+
+Create a Playwright automated test using the existing automation framework.
+
+Test Case ID: TC-USER-01
+Test Case Name: Create a User for Customer
+
+Application URL:
+https://addocloudplatformdemoapp2.azurewebsites.net/
+
+Prerequisite:
+1. Execute the login test case (TC-LOGIN-01.spec) to authenticate the user before running this test.
+2. Ensure the customer is already created using test case TC-CUSTOMER-01.
+
+Test Data:
+
+User Name: TestUser_0001
+Account: testuser001@skyforce.no
+Email: testuser001@skyforce.no
+Phone Number: 7123456709
+
+
+Test Steps:
+
+1. Navigate to the "Customers" tab.
+2. Search the customer - this test case uses the customer created by TC-CUSTOMER-01.spec. Do not create a new customer. Use the customer name from customerData.json.
+3. Open the customer card by clicking on it.
+4. Navigate to the "Users" tab.
+5. Click the "+" icon to create a new user.
+6. Validate the "Create New User" popup is displayed and verify the header "Create New User".
+7. Enter User Name.
+8. Enter Account.
+9. Validate the customer name is automatically available in the Customer field.
+   - Note: the Customer field may be an <input> element (verify with toHaveValue) or a displayed text element (verify with toContainText). Detect the tag at runtime.
+10. Validate "Customer" option is available in the Role dropdown field.
+11. Enter Email.
+12. Enter Phone Number.
+13. Click "Submit" button to create the user.
+14. Verify the created user appears in the Users list:
+    - User Name
+    - Account
+    - Tenant
+    - Role
+    - Super User : No
+    - Active checkbox is enabled
+15. Navigate to the "Administration" tab (top-level nav link, not a sub-tab).
+16. Search the created user using the user name via the Administration page search input (input[placeholder="Search"]).
+17. Verify the created user appears in the Administration list:
+    - User Name
+    - Account
+    - Tenant
+    - Role
+    - Super User : No
+    - Active checkbox is enabled
+
+
+Expected Result:
+
+- "Create New User" popup is displayed.
+- User details are successfully saved.
+- Created user appears in the Users list under the selected customer.
+- User information is correctly displayed in the Administration section.
+
+
+Automation Notes:
+
+- Follow the existing Playwright automation framework structure.
+- Use Page Object Model.
+- Use locators from the `locators` folder.
+- Use test data from `test-data/userData.json`.
+- Place the test in `tests/regression/TC-USER-01.spec.ts`.
+- Capture screenshots for important validation steps.
+- Capture screenshots automatically on failures.
+- Customer field validation in Create User popup: detect element tag at runtime and use `toHaveValue` for input/select elements or `toContainText` for text-display elements.
+- Steps 14 (Users list inside customer card) and steps 16-17 (Administration list) use DIFFERENT search inputs and must be handled by separate methods:
+  - `verifyUserInList` → searches `#userSearchInput` in the customer card Users tab.
+  - `verifyUserInAdministration` → searches `input[placeholder="Search"]` in the Administration page.
+- The Administration tab is a top-level navigation link (`a[href="/#administration"]`). Do NOT check `aria-pressed` immediately after click as it may not be synchronous; rely on `waitForLoadState('networkidle')` instead.
+- User row locator for both lists: `div[role="row"]:has-text("<userName>")`.
+- Active checkbox locator: `div[role="row"]:has-text("<userName>") input[type="checkbox"]`.

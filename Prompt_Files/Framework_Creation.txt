@@ -1,0 +1,71 @@
+Act as a Senior QA Automation Architect.
+
+Create a clean and maintainable Playwright automation framework using TypeScript.
+
+Requirements:
+
+Use Page Object Model.
+
+Folder structure must include:
+
+tests
+tests/smoke
+tests/regression
+pages
+locators
+test-data
+utils
+reports
+screenshots
+videos
+
+Framework features:
+
+1. Separate locator files.
+2. Page Object classes for page actions.
+3. Test data stored in JSON files.
+4. Smoke and regression test suites in separate folders.
+5. HTML report generation.
+6. Screenshots on failure automatically.
+7. Screenshots for important success validation steps.
+8. Video recording on failure.
+9. Reports should include screenshots.
+10. Ability to run tests in multiple browsers.
+11. Headed mode for debugging.
+12. Headless mode for pipeline runs.
+13. Retry mechanism to reduce flaky tests.
+
+Test Script Naming Convention:
+
+All test scripts must follow the Test Case ID naming pattern.
+
+Example:
+TC-LOGIN-01.spec.ts  
+TC-PRODUCT-01.spec.ts
+
+The Playwright test title must also include the Test Case ID.
+
+Example: test('TC-LOGIN-01 Login with Skyforce Account', async () => { })
+
+Test scripts should be placed according to the test type:
+    Smoke tests → tests/smoke  
+    Regression tests → tests/regression
+
+
+Provide example files for:
+
+playwright.config.ts
+LoginPage.ts
+LoginLocators.ts
+login.spec.ts
+loginData.json
+screenshotHelper.ts
+reporterConfig.ts
+
+Also show how to run:
+
+npm run smoke
+npm run regression
+npm run test
+
+Make the framework easy for QA engineers to understand and maintain.

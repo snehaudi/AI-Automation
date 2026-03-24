@@ -1,0 +1,36 @@
+You are an AI automation agent using Playwright MCP.
+
+Create a Playwright automated test using the existing automation framework.
+
+Test Case ID: TC-LOGIN-01
+Test Case Name: Login with Skyforce Account
+
+Application URL:
+https://addocloudplatformdemoapp2.azurewebsites.net/
+
+Test Data:
+Username: john.Smith@skyforce.no
+Password: Drammen2023
+Expected User: John Test
+
+Test Steps:
+
+1. Open Cloud Portal URL.
+2. Enter username.
+3. Enter password.
+4. Click "Sign in".
+5. When prompted "Stay signed in?", click "Yes".
+
+Expected Result:
+
+Home page title **"Welcome to Addovation Cloud"** is visible  
+and logged-in username **"John Test"** is visible at the bottom right corner.
+
+Automation Notes:
+
+- Follow the existing Playwright automation framework structure.
+- Use Page Object Model.
+- Use locators from the `locators` folder.
+- Use test data from `test-data/loginData.json`.
+- Place the test in `tests/smoke/login.spec.ts`.
+- Capture screenshot for validation step.
