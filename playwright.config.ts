@@ -24,10 +24,7 @@ export default defineConfig({
   /* Opt out of parallel tests completely to ensure one-by-one execution for demo and stable auth. */
   workers: 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [
-    ['html', { outputFolder: 'reports/html-report', open: 'never' }],
-    ['list']
-  ],
+ reporter: [['html', { open: 'never' }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
